@@ -48,7 +48,7 @@ public class Stack<T> implements Iterable<T> {
 		T item = items[--N];
 		items[N] = null;	// make it unreachable to allow for garbage collection
 		
-		if (N > 0 && N == items.length / 4) resize(N / 2);	// if items use up just a quarter of space, reduce the size of stack
+		if (N > 0 && N == items.length / 4) resize(items.length / 2);	// if items use up just a quarter of space, reduce the size of stack
 		
 		return item;
 	}

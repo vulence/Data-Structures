@@ -7,11 +7,16 @@ public class Tester {
 		
 		s.push("Hello");
 		s.push("World");
+		s.push("test");
+		s.push("stack");
 		
 		System.out.println(s.size());
 		System.out.println(s.pop());
 		System.out.println(s.peek());
 		System.out.println(s.pop());
 		System.out.println(s.isEmpty());
+		
+		s.push("Hello");
+		s.push("world");
 	}
 }
