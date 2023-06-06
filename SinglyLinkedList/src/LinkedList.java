@@ -102,6 +102,22 @@ public class LinkedList<T> implements Iterable<T> {
 		
 		return false;
 	}
+	
+	/*
+	 * reverses the list
+	 */
+	public void reverse() {
+		Node<T> prev = null, cur = head, next = head;
+		
+		while (cur != null) {
+			next = cur.next;
+			cur.next = prev;
+			prev = cur;
+			cur = next;
+		}
+		
+		head = prev;
+	}
 
 	/*
 	 * returns an iterator to the list that iterates in FIFO order

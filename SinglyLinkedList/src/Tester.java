@@ -16,6 +16,11 @@ public class Tester {
 		System.out.println(list.find(3));
 		
 		for (int i : list) System.out.println(i);
+		
+		System.out.println();
+		list.reverse();
+		
+		for (int i : list) System.out.println(i);
 	}
 
 }
