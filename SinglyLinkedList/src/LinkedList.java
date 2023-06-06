@@ -1,10 +1,3 @@
-/*
- * TODO: add an element to end of list
- * TODO: remove an element from the beginning
- * TODO: find an element if it exists
- * TODO: sort the nodes of a linked list
- */
-
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
@@ -23,6 +16,18 @@ public class LinkedList<T> implements Iterable<T> {
 			while (tmp.next != null) tmp = tmp.next;
 			
 			tmp.next = new Node<T>(item);
+		}
+	}
+	
+	/*
+	 * adds an element to the beginning of the list
+	 */
+	public void addToBeginning(T item) {
+		if (head == null) head = new Node<T>(item);
+		else {
+			Node<T> tmp = new Node<T>(item);
+			tmp.next = head;
+			head = tmp;
 		}
 	}
 	
@@ -81,6 +86,21 @@ public class LinkedList<T> implements Iterable<T> {
 	 */
 	public boolean isEmpty() {
 		return head == null;
+	}
+	
+	/*
+	 * returns true if element with value data exists in the list, false otherwise
+	 */
+	public boolean find(T data) {
+		Node<T> tmp = head;
+		
+		while (tmp != null) {
+			if (tmp.data == data) return true;
+			
+			tmp = tmp.next;
+		}
+		
+		return false;
 	}
 
 	/*

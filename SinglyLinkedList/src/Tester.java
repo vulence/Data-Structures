@@ -1,6 +1,8 @@
-
 public class Tester {
 
+	/*
+	 * unit tests the singly linked list data type
+	 */
 	public static void main(String[] args) {
 		LinkedList<Integer> list = new LinkedList<Integer>();
 		
@@ -9,8 +11,9 @@ public class Tester {
 		list.add(7);
 		list.add(8);
 		System.out.println("Middle is: " + list.findMiddle());
-		System.out.println(list.remove(6) + "\n");
-		list.add(6);
+		list.addToBeginning(1);
+		list.addToBeginning(2);
+		System.out.println(list.find(3));
 		
 		for (int i : list) System.out.println(i);
 	}
